@@ -1,0 +1,53 @@
+﻿@model Carpe_Librum_Proto_0.Models.BookSugestion
+
+@{
+    ViewBag.Title = "BookOfMonth";
+}
+
+<h2 style="text-align:center">Book of the Month: @DateTime.Today.ToString("MMMM")</h2>
+
+
+    
+
+<div>
+    <hr />
+ <img src="~/Images/The_Wind_In_The_Willows.jpg" width="350" height="480" align="right"/>
+ 
+
+    <dl align="left" style="margin-inline:auto; font-size:x-large;" class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+         <dt>
+            @Html.DisplayNameFor(model => model.Authour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Authour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublicationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublicationDate)
+        </dd>
+
+    </dl>
+
+</div>

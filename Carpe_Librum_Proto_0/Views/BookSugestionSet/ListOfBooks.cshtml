@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Carpe_Librum_Proto_0.Models.BookSugestion>
+
+@{
+    ViewBag.Title = "ListOfBooks";
+}
+
+<h2>List Of Books</h2>
+
+<p>
+    @Html.ActionLink("Add a Sugestion", "CreateBook")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Authour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublicationDate)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach(var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Authour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublicationDate)
+        </td>
+        
+        <td>
+         
+            @Html.ActionLink("Details", "Details", new { id=item.BookID })
+           
+        </td>
+    </tr>
+}
+
+</table>
